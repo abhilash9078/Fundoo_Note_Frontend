@@ -1,0 +1,29 @@
+<div class="icongroup">
+
+    <img class="search_image" style="margin-right: 10px;
+      height: 20px;" src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg">
+    <img class="search_image" style="margin-right: 10px;
+      height: 20px;" src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg">
+      <img mat-button [matMenuTriggerFor]="color" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" 
+       height="25px" style="margin-right: 10px;"/>
+    <mat-menu #color="matMenu" yPosition="below" >
+    <div class="colour">
+        <div *ngFor="let array of colorArray" >
+          <button style="height: 30px ;width: 30px;display: block;border-radius: 100px;"
+              mat-menu-item (click)="changeColor(array.name)" [style.background]="array.name">
+          </button>
+        </div>  
+    </div>
+    </mat-menu>
+    <img class="search_image" style="margin-right: 10px;
+      height: 20px;" src="../../../assets/imagesmode_FILL0_wght400_GRAD0_opsz48.svg">
+    <img *ngIf="!is_archive" class="search_image" style="margin-right: 10px;
+      height: 20px;" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48 (1).svg" (click)="Archive()">
+    <img *ngIf="is_archive" src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg"
+       height="20px" (click)="UnArchive()">
+    <img  mat-button [matMenuTriggerFor]="menu" src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg"
+        style="height: 25px;">
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="Trash()">Delete note</button>
+    </mat-menu>
+</div>

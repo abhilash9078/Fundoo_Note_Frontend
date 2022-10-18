@@ -1,0 +1,14 @@
+<div> 
+    <div fxLayout="column">
+        <input matInput [(ngModel)]="title">
+        <input matInput [(ngModel)]="description">
+
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <app-icons></app-icons>
+            <div class="btn">
+            <button mat-button (click)="onClick()">Close</button>
+        </div>
+        </div>
+        
+    </div>
+</div>

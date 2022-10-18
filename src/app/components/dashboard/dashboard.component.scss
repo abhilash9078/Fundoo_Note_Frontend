@@ -1,0 +1,134 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .example-is-mobile.example-toolbar {
+    position: fixed;
+    z-index: 2;  
+  }
+  .hov{
+    border: none;
+    background-color: #fff;
+  }
+  .hov:hover{
+    background-color: #f1f3f4;
+    border-radius: 50%;
+  }
+  
+  
+  
+  h1.example-app-name {
+    margin-left: 8px;
+    font-size: large;
+    color: gray;
+  }
+  
+  .example-sidenav-container {
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    flex: 1 0 auto;
+  }
+  .example-toolbar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0babab9;
+    background-color: #fff;
+  }
+  .menu-icon{
+    color: #000;
+  }
+  .keep-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;  
+
+    img{
+        height: 40px;
+        width: 40px;
+    }
+  }
+  
+  .search-box{
+    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-grow: 1;
+    background-color: #f1f3f4;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 5px;
+   
+    input{
+      background-color: transparent;
+      border: none;
+      outline-style: none;
+      margin-left: 10px;
+    }
+    img{
+        height: 30px;
+    }
+  }
+.right-icons{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 100px;
+    :hover{
+      background-color: #f1f3f4;
+      border-radius: 50%;
+    }
+    img{
+      margin-right: 10px;
+      padding: 10px;
+      height: 30px;
+    }
+    
+  }
+  .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    :hover{
+      background-color: #f1f3f4;
+      border-radius: 50%;
+    }
+    img{
+      margin-right: 10px;
+      padding: 10px;
+      height: 25px;
+    }
+    
+  }
+  .nav-list{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    
+    a{
+      border-radius: 15%;
+    }
+    a:focus{
+      background-color: #feefc3;
+    }
+    img{
+      margin-right: 30px;
+      height: 20px;
+    }
+  }
+  
+  .content-container{
+    height: 100%;
+    width: 100%;
+  }

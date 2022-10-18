@@ -1,0 +1,47 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar  class="example-toolbar">
+      <div class="keep-icon">
+        <button class="hov" mat-icon-button (click)="snav.toggle()">
+          <mat-icon class="menu-icon">menu</mat-icon>
+        </button>
+        <img src="../../../assets/keep_2020q4_48dp.png"  height="45px" width="60px">
+        <h1 class="example-app-name">Fundoo Notes</h1>
+      </div>
+  
+      <div class="search-box">
+        <img src="../../../assets/search_FILL0_wght400_GRAD0_opsz48.svg" />
+        <input matInput placeholder="Search" />
+      </div>
+      <div class="right-icons">
+        <img src="../../../assets/refresh_FILL0_wght400_GRAD0_opsz48.svg" />
+        <img src="../../../assets/dns_FILL0_wght400_GRAD0_opsz48.svg" />
+        <img src="../../../assets/settings_FILL0_wght400_GRAD0_opsz48.svg" />
+      </div>
+      <div class="menu">
+        <img src="../../../assets/apps_FILL0_wght400_GRAD0_opsz48.svg" />
+        <img src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" />
+      </div> 
+    </mat-toolbar>
+  
+    <mat-sidenav-container class="example-sidenav-container"
+        [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+            [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+            <mat-nav-list class="nav-list">
+                <a mat-list-item routerLink="/dashboard/notes">
+                  <img src="../../../assets/lightbulb_FILL0_wght400_GRAD0_opsz48.svg" />notes</a>
+                <a mat-list-item routerLink=".">
+                  <img src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.svg" />reminder</a>
+                <a mat-list-item routerLink=".">
+                  <img src="../../../assets/edit_FILL0_wght400_GRAD0_opsz48.svg" />label</a>
+                <a mat-list-item routerLink="/dashboard/archive">
+                  <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" />archive</a>
+                <a mat-list-item routerLink="/dashboard/trash">
+                  <img src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48 (1).svg" />trash</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content class="content-container">
+          <p><router-outlet></router-outlet></p>
+        </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

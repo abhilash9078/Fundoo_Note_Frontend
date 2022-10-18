@@ -1,0 +1,3 @@
+<app-takenote (createtodisplay)="recieveEvent($event)"></app-takenote>
+<app-displaynote [childMessage]="notelist" (displaytogetallnotes)="receiveMessagefromdisplaycard($event)"
+(noteUpdated)="updatedData($event)" ></app-displaynote>

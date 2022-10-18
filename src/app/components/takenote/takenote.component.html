@@ -1,0 +1,29 @@
+<div class="first" fxLayout="column" fxLayoutAlign="center center">
+    <div
+      class="second"
+      fxLayout="column"
+      style="box-shadow: 0px -0px 10px #25242449; width: 600px; padding: 5px"
+    >
+      <div class="div1" *ngIf="show">
+        <input type="text" placeholder="Title" [(ngModel)]="title" />
+      </div>
+      <div  class="div1" *ngIf="!show || show" (click)="noteClick()" fxLayout="row" fxLayoutAlign="space-between center">
+        <div>
+          <input style="outline: none;"
+            type="text"
+            placeholder="Take a note..."
+            [(ngModel)]="body"
+          />
+        </div>
+        <div class="image" *ngIf="!show">
+            <img class="searchimage" src="../../../assets/check_box_FILL0_wght400_GRAD0_opsz48.svg">
+            <img class="searchimage" src="../../../assets/brush_FILL0_wght400_GRAD0_opsz48.svg" />
+            <img class="searchimage" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" />
+          </div>
+        </div>
+        <div class="btn" *ngIf="show" fxLayout="row" fxLayoutAlign="space-between center">
+          <app-icons></app-icons>
+          <button (click)="noteClose()">Close</button>
+        </div>
+      </div>
+    </div>
